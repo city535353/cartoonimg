@@ -73,7 +73,7 @@
         function gbr_ink(sourceID, resultID) {
             var canvas = fx.canvas();
             var texture = canvas.texture(document.getElementById(sourceID));
-            canvas.draw(texture).ink(0.6).update();  //0.35
+            canvas.draw(texture).ink(0.3).update();  //0.35
             var image = new Image;
             document.getElementById(resultID).src = canvas.toDataURL();
             //document.getElementById(sourceID).parentNode.insertBefore(canvas, document.getElementById(sourceID)); //jika disimpan di canvas
@@ -82,7 +82,7 @@
         function gbr_denoise(sourceID, resultID) {
             var canvas = fx.canvas();
             var texture = canvas.texture(document.getElementById(sourceID));
-            canvas.draw(texture).denoise(30).update();  //50
+            canvas.draw(texture).denoise(150).update();  //50
             var image = new Image;
             document.getElementById(resultID).src = canvas.toDataURL();
         };
